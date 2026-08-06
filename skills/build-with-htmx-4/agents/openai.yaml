@@ -1,0 +1,14 @@
+interface:
+  display_name: Build with htmx 4
+  short_description: Build and migrate htmx 4 server-rendered applications
+  default_prompt: Use $build-with-htmx-4 to select or follow the backend stack and
+    implement this server-rendered interface.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
