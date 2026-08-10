@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repo_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$repo_root"
+
+for required_file in README.md skills/build-with-htmx-4/SKILL.md; do
+  if [[ ! -f "$required_file" ]]; then
+    printf 'error: required repository file is missing: %s\n' "$required_file" >&2
+    exit 1
+  fi
+done
+
+printf 'build-with-htmx-4-skill is ready; no external dependencies are required.\n'
